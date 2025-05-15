@@ -3,7 +3,7 @@
  npm install styled-component
  npm install react-router-dom  
 
-
+<!-- error element: error bubble up...global error page -->
 <!-- loader  , fetch the data even before page is render , prefecthing -->
  <!-- set async loader function and make sure it return something -->
  <!-- uselaoder data to acces loader data -->

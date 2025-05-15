@@ -20,7 +20,7 @@ const ErrorPage = () => {
     );
   }
 
-  return <div>Error</div>;
+  return <div>Something went wrong....!!</div>;
 };
 
 export default ErrorPage;

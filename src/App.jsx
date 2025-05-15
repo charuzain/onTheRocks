@@ -10,16 +10,20 @@ import CocktailDetailPage from './pages/CocktailDetailPage';
 import NewsLetterPage from './pages/NewsLetterPage';
 import PageLayout from './pages/PageLayout';
 import ErrorPage from './pages/ErrorPage';
+import { loader as landingLoader } from './pages/HomePage';
+import SinglePageError from './pages/SinglePageError';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
       element: <PageLayout />,
-      errorElement:<ErrorPage/>,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,
+          loader: landingLoader,
+          errorElement:<SinglePageError/>,
           element: <HomePage />,
         },
         {
