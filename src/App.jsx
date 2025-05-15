@@ -9,12 +9,14 @@ import AboutPage from './pages/AboutPage';
 import CocktailDetailPage from './pages/CocktailDetailPage';
 import NewsLetterPage from './pages/NewsLetterPage';
 import PageLayout from './pages/PageLayout';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
       element: <PageLayout />,
+      errorElement:<ErrorPage/>,
       children: [
         {
           index: true,
