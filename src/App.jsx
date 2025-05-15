@@ -1,0 +1,42 @@
+import './App.css';
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import CocktailDetailPage from './pages/CocktailDetailPage';
+import NewsLetterPage from './pages/NewsLetterPage';
+import PageLayout from './pages/PageLayout';
+
+function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <PageLayout />,
+      children: [
+        {
+          index: true,
+          element: <HomePage />,
+        },
+        {
+          path: '/about',
+          element: <AboutPage />,
+        },
+        {
+          path: '/cocktail/:id',
+          element: <CocktailDetailPage />,
+        },
+        {
+          path: '/newsLetter',
+          element: <NewsLetterPage />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
+}
+
+export default App;
