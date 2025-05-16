@@ -11,6 +11,7 @@ import NewsLetterPage from './pages/NewsLetterPage';
 import PageLayout from './pages/PageLayout';
 import ErrorPage from './pages/ErrorPage';
 import { loader as landingLoader } from './pages/HomePage';
+import { loader as singleCocktailLoader } from './pages/CocktailDetailPage';
 import SinglePageError from './pages/SinglePageError';
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         {
           index: true,
           loader: landingLoader,
-          errorElement:<SinglePageError/>,
+          errorElement: <SinglePageError />,
           element: <HomePage />,
         },
         {
@@ -32,6 +33,8 @@ function App() {
         },
         {
           path: '/cocktail/:id',
+          loader: singleCocktailLoader,
+          errorElement: <SinglePageError />,
           element: <CocktailDetailPage />,
         },
         {
