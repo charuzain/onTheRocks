@@ -19,7 +19,7 @@ const HomePage = () => {
   console.log(searchTerm)
   return <>
     <SearchForm />
-    <CockTailList/>
+    <CockTailList drinks={drinks} />
   </>
 };
 
