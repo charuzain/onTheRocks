@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { useLoaderData } from 'react-router-dom';
+import SearchForm from '../components/searchForm';
+import CockTailList from '../components/CockTailList';
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=a';
 
@@ -15,7 +17,10 @@ const HomePage = () => {
   const { drinks, searchTerm } = useLoaderData();
   console.log(drinks);
   console.log(searchTerm)
-  return <div>HomePage</div>;
+  return <>
+    <SearchForm />
+    <CockTailList/>
+  </>
 };
 
 export default HomePage;
