@@ -25,6 +25,14 @@ const CocktailDetailPage = () => {
     navigate('/');
   };
 
+
+  const responseKeys = Object.keys(drink);
+  const ingKeys = responseKeys.filter((key) => key.startsWith('strIngredien') && drink[key] !== null);
+   console.log(ingKeys)
+  const ingredients = ingKeys.map(key => drink[key])
+  console.log(ingredients);
+
+
   return (
     <>
       <button onClick={clickHandler}>Back</button>
@@ -34,6 +42,7 @@ const CocktailDetailPage = () => {
       <p> category: {drink.strCategory}</p>
       <p>Cocktail info :{drink.strGlass}</p>
       <p>Cocktail glass ingredients</p>
+      <p>Ingredients: {ingredients.join(", ")} </p>
       {/* :Cocktail glass ingredients :Gin,Grand Marnier,Lemon Juice,Grenadine */}
       <p>instructions :{drink.strInstructions}</p>
     </>

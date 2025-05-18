@@ -59,3 +59,6 @@ Show a submit animation after a form post
 <!-- const value = "some value or state"
 <Outlet context = {{value}}> -->
 <!-- use hook useOutletContext -->
+
+
+<!-- Form component  react router dom-->
